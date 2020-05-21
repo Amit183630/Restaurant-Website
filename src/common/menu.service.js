@@ -4,8 +4,9 @@
   .service('MenuService',MenuService);
   MenuService.$inject=['$http','ApiPath']
   function MenuService($http,ApiPath) {
-    var serice=this;
+    var service=this;
     service.getCategories=function () {
+      console.log("Menu Service");
       return $http.get(ApiPath+"/categories.json").then(function (response) {
         return response.data;
       });
