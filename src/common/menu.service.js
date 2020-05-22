@@ -6,7 +6,6 @@
   function MenuService($http,ApiPath) {
     var service=this;
     service.getCategories=function () {
-      console.log("Menu Service");
       return $http.get(ApiPath+"/categories.json").then(function (response) {
         return response.data;
       });
@@ -17,7 +16,7 @@
         config.params={ 'category':category }
       }
       return $http.get(ApiPath+'/menu_items.json',config).then(function (response) {
-        return reponse.data;
+        return response.data;
       });
     }
   }
