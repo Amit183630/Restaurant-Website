@@ -3,7 +3,7 @@ body {
   color: #fff;
   background-color: #61122f;
   font-family: 'Oxygen', sans-serif;
-
+  
 }
 
 .initial-loading {
@@ -26,7 +26,7 @@ body {
 
 .navbar-brand {
   padding-top: 25px;
-  
+
 }
 .navbar-brand h1 { /* Restaurant name */
   font-family: 'Lora', serif;

@@ -1,0 +1,27 @@
+<div ng-if="!infCtrl.isSignedUp" >
+  Not Signed Up Yet. Sign up Now!
+</div>
+<div ng-if="infCtrl.isSignedUp" class="container">
+<table>
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Phone No</th>
+      <th>Menu Number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{infCtrl.user.fname}}</td>
+      <td>{{infCtrl.user.lname}}</td>
+      <td>{{infCtrl.user.email}}</td>
+      <td>{{infCtrl.user.phone}}</td>
+      <td>{{infCtrl.user.menu}}</td>
+    </tr>
+  </tbody>
+
+</table>
+<menu-item ng-repeat="item in infCtrl.items" menu-item="item"><menu-item>
+</div>

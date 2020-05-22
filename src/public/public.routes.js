@@ -39,7 +39,15 @@
     })
     .state('public.signup',{
       url:'/sign-up',
-      templateUrl:'src/public/sign-up/sign-up.html'
+      templateUrl:'src/public/sign-up/sign-up.html',
+      controller:'SignupController',
+      controllerAs:'signCtrl'
+    })
+    .state('public.myinfo',{
+      url:'/info',
+      templateUrl:'src/public/info/myinfo.html',
+      controller:'InfoController',
+      controllerAs:'infCtrl'
     });
   }
 })();

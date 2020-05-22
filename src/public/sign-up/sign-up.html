@@ -1,3 +1,44 @@
+
 <div class="container">
-    <input type="text" class="form-control" placeholder="First Name">
-    <input type="text" class="form-control" placeholder="Last Name">
+<fieldset>
+  <legend><b style="color:grey">Subscribe for Newsletter</b></legend>
+  <form name="regForm" method="post" novalidate>
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="First Name" name="fname"
+      ng-model="signCtrl.user.fname" required minlength="3">
+      <span
+       ng-if="(regForm.fname.$error.minlength)||(regForm.fname.$error.required)
+       && (regForm.fname.$touched)">
+       Please Enter atleast 3 character
+     </span>
+      <input type="text" class="form-control" placeholder="Last Name" name="lname"
+      ng-model="signCtrl.user.lname" required minlength="3">
+      <span
+       ng-if="(regForm.lname.$error.minlength)||(regForm.lname.$error.required)
+       && (regForm.lname.$touched)">
+       Please Enter atleast 3 character
+     </span>
+      <input type="email" class="form-control" placeholder="Email Address" ng-model="signCtrl.user.email" name="email"
+      required>
+      <span
+      ng-if="(regForm.email.$invalid && regForm.email.$touched)" >
+      Must be a valid email address :handle@domain format
+    </span>
+      <input type="text" class="form-control" placeholder="Phone Number" name="phone"
+      required ng-model="signCtrl.user.phone"
+        pattern="(\d{3})-(\d{3})-(\d{4})">
+        <span
+        ng-if="regForm.phone.$invalid && regForm.phone.$touched">
+        Phone no must be in Format:###-###-####
+      </span>
+      <input type="text" class="form-control" name="menu" placeholder="Menu Number of Favourite dish(short Name)"
+      ng-model="signCtrl.user.menu" required>
+      <button class="btn btn-primary" ng-disabled="regForm.$invalid" ng-click="signCtrl.signup()">Subscribe</button>
+    </div>
+  </form>
+  <div class="form-group message" ng-if="signCtrl.saved" style="color:green">
+    Your Information has been saved
+  </div>
+</fieldset>
+
+</div>
