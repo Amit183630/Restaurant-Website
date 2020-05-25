@@ -214,3 +214,7 @@ th, td {
 
 tbody:hover {background-color:white;
 color:brown;}
+.error{
+  font-weight: bold;
+  color: red;
+}

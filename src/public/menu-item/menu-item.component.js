@@ -11,8 +11,6 @@
   MenuItemController.$inject=['ApiPath'];
   function MenuItemController(ApiPath) {
     var $ctrl=this;
-    console.log(ApiPath);
     $ctrl.basePath=ApiPath;
-    console.log($ctrl);
   }
 })();
